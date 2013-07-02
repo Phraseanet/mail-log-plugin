@@ -33,6 +33,12 @@ plugins:
         emitter: logger@system.com
 ```
 
+ - level: optional, default to `\task_abstract::LOG_DEBUG`
+ - channels: optional, array, default to all channels.
+ - subject: optional, string, default to 'Log message'
+ - recipients: mandatory, array ; an array of recipients emails
+ - emitter: mandatory, string ; the email of emitter
+
 ## Uninstall
 
 Use Phraseanet Konsole to uninstall the plugin
