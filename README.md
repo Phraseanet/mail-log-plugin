@@ -1,5 +1,6 @@
 # Phraseanet Mail-Log Plugin
 
+[![Build Status](https://travis-ci.org/Phraseanet/mail-log-plugin.png?branch=master)](https://travis-ci.org/Phraseanet/mail-log-plugin)
 A Mail logger plugin for [Phraseanet](https://github.com/alchemy-fr/Phraseanet);
 
 ## Installation
