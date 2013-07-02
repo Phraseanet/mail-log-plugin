@@ -60,7 +60,7 @@ class MailLogPluginService implements PluginProviderInterface
         });
 
         $app['mail-log-plugin.handler'] = $app->share(function (Application $app) {
-            $level = $app['mail-log-plugin.configuration']['emitter'];
+            $level = $app['mail-log-plugin.configuration']['level'];
 
             if (defined($level)) {
                 $level = constant($level);
