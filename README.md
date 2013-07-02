@@ -1,5 +1,7 @@
 # Phraseanet Mail-Log Plugin
 
+A Mail logger plugin for [Phraseanet](https://github.com/alchemy-fr/Phraseanet);
+
 ## Installation
 
 First, retrieve the latest version :
