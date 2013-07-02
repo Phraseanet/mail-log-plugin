@@ -1,0 +1,19 @@
+{
+    "name"        : "phraseanet/mail-log-plugin",
+    "description" : "Mail log plugin for Phraseanet",
+    "license"     : "MIT",
+    "require": {
+        "php"                   : ">=5.3.3",
+        "monolog/monolog"       : "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit"       : "~3.7",
+        "phraseanet/phraseanet" : ">=3.8.x-dev@dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "Alchemy"     : "src"
+        }
+    }
+}
