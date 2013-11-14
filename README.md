@@ -25,9 +25,8 @@ Use the following options to configure the plugin in your `configuration.yml`
 ```yaml
 plugins:
     mail-log-plugin:
-        # values : task_abstract::[LOG_DEBUG | LOG_INFO | LOG_WARNING |
-        # LOG_ERROR | LOG_CRITICAL | LOG_ALERT]
-        level: task_abstract::LOG_ERROR
+        # values : [DEBUG | INFO | NOTICE | WARNING | ERROR | CRITICAL | ALERT | EMERGENCY]
+        level: ERROR
         channels:
             task-manager.logger
             monolog
@@ -36,7 +35,7 @@ plugins:
         emitter: logger@system.com
 ```
 
- - level: optional, default to `\task_abstract::LOG_DEBUG`
+ - level: optional, default to `DEBUG`
  - channels: optional, array, default to all channels.
  - subject: optional, string, default to 'Log message'
  - recipients: mandatory, array ; an array of recipients emails

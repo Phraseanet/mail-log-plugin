@@ -20,7 +20,7 @@ class MailLogPluginServiceTest extends \PHPUnit_Framework_TestCase
             ->method('offsetGet')
             ->with('plugins')
             ->will($this->returnValue(array(
-                'mail-log-plugin' => array('level' => Logger::DEBUG),
+                'mail-log-plugin' => array('level' => 'DEBUG'),
             )));
 
         $app['phraseanet.configuration'] = $configuration;

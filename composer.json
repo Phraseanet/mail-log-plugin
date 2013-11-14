@@ -11,6 +11,12 @@
         "phraseanet/phraseanet" : ">=3.8.x-dev@dev"
     },
     "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/alchemy-fr/tcpdf-clone"
+        }
+    ],
     "autoload": {
         "psr-0": {
             "Alchemy"     : "src"

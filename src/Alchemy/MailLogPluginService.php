@@ -31,13 +31,19 @@ class MailLogPluginService implements PluginProviderInterface
                 $conf = $app['phraseanet.configuration']['plugins']['mail-log-plugin'];
             }
 
-            return array_replace(array(
+            $conf = array_replace(array(
                 'subject'    => '',
                 'recipients' => array(),
                 'emitter'    => null,
                 'level'      => Logger::DEBUG,
                 'channels'   => $app['log.channels'],
             ), $conf);
+
+            if (defined('Monolog\\Logger::'.$conf['level'])) {
+                $conf['level'] = constant('Monolog\\Logger::'.$conf['level']);
+            }
+
+            return $conf;
         });
 
         $app['mail-log-plugin.recipients'] = $app->share(function (Application $app) {
@@ -61,10 +67,6 @@ class MailLogPluginService implements PluginProviderInterface
 
         $app['mail-log-plugin.handler'] = $app->share(function (Application $app) {
             $level = $app['mail-log-plugin.configuration']['level'];
-
-            if (defined($level)) {
-                $level = constant($level);
-            }
 
             return new SwiftMailerHandler($app['mailer'], $app['mail-log-plugin.message'], $level);
         });
